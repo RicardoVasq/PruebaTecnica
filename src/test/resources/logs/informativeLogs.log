@@ -1,17 +1,17 @@
-08:09:44.441 INFO  AUTOMATION - Suite iniciada Default Suite
-08:09:46.386 INFO  AUTOMATION - Comenzamos el test: Caso3Test
-08:09:46.409 INFO  AUTOMATION - Ingresamos credenciales invalidas
-08:09:46.409 INFO  AUTOMATION - Ingresamos a la URL de home
-08:09:50.297 INFO  AUTOMATION - Navegamos hasta la pantalla de login
-08:09:50.998 INFO  AUTOMATION - Ingresamos el correo y la contraseña
-08:09:51.114 INFO  AUTOMATION - Enviamos los datos de login
-08:09:51.871 INFO  AUTOMATION - Validamos el mensaje de error
-08:09:51.899 INFO  AUTOMATION - Ingresamos con credenciales validas
-08:09:51.899 INFO  AUTOMATION - Ingresamos a la URL de home
-08:09:52.586 INFO  AUTOMATION - Navegamos hasta la pantalla de login
-08:09:53.263 INFO  AUTOMATION - Ingresamos el correo y la contraseña
-08:09:53.352 INFO  AUTOMATION - Enviamos los datos de login
-08:09:54.786 INFO  AUTOMATION - Navegamos hasta la seccion de Accessories
-08:09:56.344 INFO  AUTOMATION - hasta aca llegamos
-08:09:56.758 INFO  AUTOMATION - Text Fallo: Caso3Test
-08:09:57.128 INFO  AUTOMATION - Suite finalizada Default Suite
+10:42:35.581 INFO  AUTOMATION - Suite iniciada Default Suite
+10:42:38.568 INFO  AUTOMATION - Comenzamos el test: Caso3Test
+10:42:38.592 INFO  AUTOMATION - Ingresamos credenciales invalidas
+10:42:38.592 INFO  AUTOMATION - Ingresamos a la URL de home
+10:42:42.639 INFO  AUTOMATION - Navegamos hasta la pantalla de login
+10:42:43.363 INFO  AUTOMATION - Ingresamos el correo y la contraseña
+10:42:43.482 INFO  AUTOMATION - Enviamos los datos de login
+10:42:44.483 INFO  AUTOMATION - Validamos el mensaje de error
+10:42:44.517 INFO  AUTOMATION - Ingresamos con credenciales validas
+10:42:44.517 INFO  AUTOMATION - Ingresamos a la URL de home
+10:42:45.216 INFO  AUTOMATION - Navegamos hasta la pantalla de login
+10:42:45.912 INFO  AUTOMATION - Ingresamos el correo y la contraseña
+10:42:46.006 INFO  AUTOMATION - Enviamos los datos de login
+10:42:47.439 INFO  AUTOMATION - Navegamos hasta la seccion de Accessories
+10:42:51.622 INFO  AUTOMATION - damos click al confirmar la compra 
+10:42:53.192 INFO  AUTOMATION - Text existoso: Caso3Test
+10:42:53.412 INFO  AUTOMATION - Suite finalizada Default Suite
