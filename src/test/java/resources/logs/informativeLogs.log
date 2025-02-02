@@ -1,9 +1,0 @@
-22:29:10.580 INFO  AUTOMATION - Suite iniciada Default Suite
-22:29:12.481 INFO  AUTOMATION - Comenzamos el test: verificarPaginaPrincipaltest
-22:29:12.503 INFO  AUTOMATION - Cargando pagina incial
-22:29:13.468 INFO  AUTOMATION - Ingresando Usuario valido
-22:29:13.545 INFO  AUTOMATION - Ingresnado Contraseña password valida
-22:29:13.605 INFO  AUTOMATION - Haciendo login
-22:29:13.691 INFO  AUTOMATION - Confirmamos el despliegue de la pagian  post login
-22:29:13.711 INFO  AUTOMATION - Text existoso: verificarPaginaPrincipaltest
-22:29:13.849 INFO  AUTOMATION - Suite finalizada Default Suite
