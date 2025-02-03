@@ -6,6 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.bidi.log.Log;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
@@ -30,6 +31,7 @@ public class CasosPracticosTests extends BaseTest {
         driver.findElement(By.xpath("//input[@name=\"submitMessage\"]")).click();
         Assert.assertTrue(driver.findElement(By.xpath
                 ("//li[text()='Invalid email address.']")).isDisplayed());
+        Logs.info("cambios");
     }
 
     @Test
