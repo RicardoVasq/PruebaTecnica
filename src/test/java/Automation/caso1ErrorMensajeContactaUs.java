@@ -3,12 +3,14 @@ package Automation;
 import Utilities.BaseTest;
 import Utilities.Logs;
 import org.openqa.selenium.By;
+import org.openqa.selenium.bidi.log.Log;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class caso1ErrorMensajeContactaUs extends BaseTest {
     @Test
     public void Caso1Test() {
+        Logs.debug("Se invoca metodo para validar redireccion a la pagina");
         //Invocamos metodo para validar existencia de Elementos y redireccion a la pagian Contactanos
         redireccionContactus();
 
