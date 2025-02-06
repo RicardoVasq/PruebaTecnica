@@ -40,4 +40,4 @@ build/
 ## Logs ##
 # Ignorar archivos de logs
 *.log
-Logs/
+logs/
