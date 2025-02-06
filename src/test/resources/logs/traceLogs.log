@@ -1,35 +1,35 @@
-11:19:47.642 INFO  AUTOMATION - Suite iniciada Default Suite
-11:19:47.675 DEBUG AUTOMATION - Borrando la evidencia Anterior
-11:19:47.762 DEBUG AUTOMATION - Inicializamos el Webdriver
-11:19:49.520 DEBUG AUTOMATION - Maximizamos pantalla
-11:19:49.552 DEBUG AUTOMATION - Borrando cookies
-11:19:49.562 DEBUG AUTOMATION - asignamos el webdriver
-11:19:49.653 INFO  AUTOMATION - Comenzamos el test: Caso3Test
-11:19:49.676 INFO  AUTOMATION - Ingresamos credenciales invalidas
-11:19:49.676 INFO  AUTOMATION - Ingresamos a la URL de home
-11:19:53.439 INFO  AUTOMATION - Navegamos hasta la pantalla de login
-11:19:54.159 INFO  AUTOMATION - Ingresamos el correo y la contraseña
-11:19:54.279 INFO  AUTOMATION - Enviamos los datos de login
-11:19:55.025 INFO  AUTOMATION - Validamos el mensaje de error
-11:19:55.056 INFO  AUTOMATION - Ingresamos con credenciales validas
-11:19:55.056 INFO  AUTOMATION - Ingresamos a la URL de home
-11:19:55.717 INFO  AUTOMATION - Navegamos hasta la pantalla de login
-11:19:56.792 INFO  AUTOMATION - Ingresamos el correo y la contraseña
-11:19:56.881 INFO  AUTOMATION - Enviamos los datos de login
-11:19:58.406 INFO  AUTOMATION - Navegamos hasta la seccion de Accessories
-11:19:59.787 DEBUG AUTOMATION - Obtenemos el primero producto del listado, hacemos una espera que carge el ordenamiento seleccionado
-11:20:01.807 DEBUG AUTOMATION - Capturamos el precio del primero producto en la lista
-11:20:01.823 INFO  AUTOMATION - Damos click en producto del primero de la Lista
-11:20:03.288 DEBUG AUTOMATION - Capturamos el titulo del producto seleccionnado y el precio
-11:20:03.326 DEBUG AUTOMATION - Comparamos titulos y precios
-11:20:03.327 INFO  AUTOMATION - Indicamos que vamos a adquirir 5 articulos
-11:20:03.532 DEBUG AUTOMATION - Hacemos click en añadir a Carrito
-11:20:05.509 DEBUG AUTOMATION - la cantidad de prodcuto es Quantity: 5
-11:20:05.509 DEBUG AUTOMATION - Extraermos el precio total de la compra 
-11:20:05.528 DEBUG AUTOMATION - El precio total de la compra es 101.50
-11:20:05.528 DEBUG AUTOMATION - Comparamos el total mostrado con la esperado
-11:20:05.529 DEBUG AUTOMATION - Precio correcto de 101.50
-11:20:05.531 DEBUG AUTOMATION - Before test stop de allure
-11:20:05.538 INFO  AUTOMATION - Text existoso: Caso3Test
-11:20:05.539 DEBUG AUTOMATION - Finalizamos el webDriver
-11:20:05.696 INFO  AUTOMATION - Suite finalizada Default Suite
+11:37:03.044 INFO  AUTOMATION - Suite iniciada Default Suite
+11:37:03.079 DEBUG AUTOMATION - Borrando la evidencia Anterior
+11:37:03.168 DEBUG AUTOMATION - Inicializamos el Webdriver
+11:37:05.241 DEBUG AUTOMATION - Maximizamos pantalla
+11:37:05.269 DEBUG AUTOMATION - Borrando cookies
+11:37:05.281 DEBUG AUTOMATION - asignamos el webdriver
+11:37:05.367 INFO  AUTOMATION - Comenzamos el test: Caso3Test
+11:37:05.392 INFO  AUTOMATION - Ingresamos credenciales invalidas
+11:37:05.393 INFO  AUTOMATION - Ingresamos a la URL de home
+11:37:08.833 INFO  AUTOMATION - Navegamos hasta la pantalla de login
+11:37:09.547 INFO  AUTOMATION - Ingresamos el correo y la contraseña
+11:37:09.660 INFO  AUTOMATION - Enviamos los datos de login
+11:37:10.404 INFO  AUTOMATION - Validamos el mensaje de error
+11:37:10.435 INFO  AUTOMATION - Ingresamos con credenciales validas
+11:37:10.435 INFO  AUTOMATION - Ingresamos a la URL de home
+11:37:11.099 INFO  AUTOMATION - Navegamos hasta la pantalla de login
+11:37:11.738 INFO  AUTOMATION - Ingresamos el correo y la contraseña
+11:37:11.829 INFO  AUTOMATION - Enviamos los datos de login
+11:37:13.204 INFO  AUTOMATION - Navegamos hasta la seccion de Accessories
+11:37:14.541 DEBUG AUTOMATION - Obtenemos el primero producto del listado, hacemos una espera que carge el ordenamiento seleccionado
+11:37:16.559 DEBUG AUTOMATION - Capturamos el precio del primero producto en la lista
+11:37:16.575 INFO  AUTOMATION - Damos click en producto del primero de la Lista
+11:37:18.051 DEBUG AUTOMATION - Capturamos el titulo del producto seleccionnado y el precio
+11:37:18.088 DEBUG AUTOMATION - Comparamos titulos y precios
+11:37:18.090 INFO  AUTOMATION - Indicamos que vamos a adquirir 5 articulos
+11:37:18.296 DEBUG AUTOMATION - Hacemos click en añadir a Carrito
+11:37:20.318 DEBUG AUTOMATION - la cantidad de prodcuto es Quantity: 5
+11:37:20.318 DEBUG AUTOMATION - Extraermos el precio total de la compra 
+11:37:20.337 DEBUG AUTOMATION - El precio total de la compra es 101.50
+11:37:20.337 DEBUG AUTOMATION - Comparamos el total mostrado con la esperado
+11:37:20.338 DEBUG AUTOMATION - Precio correcto de 101.50
+11:37:20.340 DEBUG AUTOMATION - Before test stop de allure
+11:37:20.347 INFO  AUTOMATION - Text existoso: Caso3Test
+11:37:20.348 DEBUG AUTOMATION - Finalizamos el webDriver
+11:37:20.547 INFO  AUTOMATION - Suite finalizada Default Suite

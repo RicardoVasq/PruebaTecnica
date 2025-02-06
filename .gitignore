@@ -37,7 +37,5 @@ build/
 ### Mac OS ###
 .DS_Store
 
-## Logs ##
-# Ignorar archivos de logs
-*.log
-logs/
+# Ignorar la carpeta de logs en test/resources
+test/resources/logs/
