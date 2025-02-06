@@ -38,6 +38,7 @@ public class caso3ProcesoCompra extends BaseTest {
         driver.findElement(By.id("category-6")).click();
         driver.findElement(By.cssSelector("button[data-toggle='dropdown']")).click();
         List<WebElement> elements = driver.findElements(By.cssSelector("a[class='select-list js-search-link']"));
+
         for (WebElement element : elements){
             final var opcion = element.getText();
             if(opcion.equals("Name, A to Z")){
@@ -45,6 +46,7 @@ public class caso3ProcesoCompra extends BaseTest {
                 break;
             }
         }
+
         Logs.debug("Obtenemos el primero producto del listado, hacemos una espera que carge el ordenamiento seleccionado");
         Thread.sleep(2000);
         final var primerProducto = driver.findElement(By.cssSelector("h2[class='h3 product-title']")).getText().toUpperCase();
@@ -69,6 +71,8 @@ public class caso3ProcesoCompra extends BaseTest {
                     By.xpath("//button[@class='btn btn-touchspin js-touchspin bootstrap-touchspin-up']"))
                     .click();
         }
+
+
         Logs.debug("Hacemos click en añadir a Carrito");
         driver.findElement(By.cssSelector("button[class='btn btn-primary add-to-cart']")).click();
 
