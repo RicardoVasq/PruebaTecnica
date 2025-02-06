@@ -8,6 +8,7 @@ import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.testng.annotations.Test;
 
 import java.time.Duration;
 import java.util.Arrays;
@@ -16,6 +17,7 @@ import java.util.Locale;
 
 public class caso3ProcesoCompra extends BaseTest {
 
+    @Test
     public void Caso3Test() throws InterruptedException {
         Logs.info("Ingresamos credenciales invalidas");
         Login("false@gg.com", "noescorrecta");
