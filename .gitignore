@@ -44,3 +44,6 @@ debugLogs.log
 informativeLogs.log
 traceLogs.log
 !**/src/test/resources/logs/*
+/src/test/resources/logs/debugLogs.log
+/src/test/resources/logs/informativeLogs.log
+/src/test/resources/logs/traceLogs.log
