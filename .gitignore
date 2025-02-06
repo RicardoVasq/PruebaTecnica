@@ -43,4 +43,4 @@ build/
 debugLogs.log
 informativeLogs.log
 traceLogs.log
-!**/src/test/resources/logs/
+!**/src/test/resources/logs/*
