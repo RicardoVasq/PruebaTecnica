@@ -90,12 +90,11 @@ public class caso3ProcesoCompra extends BaseTest {
             precioCompra = matcher.group(); // Captura el número
         }
 
-        Logs.debug("la cantidad de prodcuto es %s", precioCompra);
+        Logs.debug("El precio total de la compra es %s", precioCompra);
 
-
+        final var precioMostrado = Double.parseDouble(precioCompra);
         Logs.debug("Comparamos el total mostrado con la esperado");
+        precioFinal(ExtraerNumeroDouble(cantidadProducto),ExtraerNumeroDouble(precioProductoSelecionado) , 7, precioMostrado);
 
-
-        Assert.assertEquals(precioProductoSelecionado,"error");
     }
 }

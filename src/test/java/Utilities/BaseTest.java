@@ -81,4 +81,19 @@ public class BaseTest {
         Logs.info("Enviamos los datos de login");
         driver.findElement(By.id("submit-login")).click();
     }
+
+    public void precioFinal (double cantidad, double precio, int shipping, double precioMostrado){
+        final var validacionPrecio = cantidad*precio + shipping;
+        Assert.assertEquals(validacionPrecio,precioMostrado);
+        Logs.debug("Precio correcto de %.2f", validacionPrecio);
+    }
+
+    public static double ExtraerNumeroDouble (String numero) {
+
+        // Expresión regular para extraer el número
+        String numeroExtraido = numero.replaceAll("[^\\d.]", "");
+            return Double.parseDouble(numeroExtraido);
+
+    }
+
 }

@@ -1,18 +1,18 @@
-09:43:06.006 INFO  AUTOMATION - Suite iniciada Default Suite
-09:43:08.869 INFO  AUTOMATION - Comenzamos el test: Caso3Test
-09:43:08.893 INFO  AUTOMATION - Ingresamos credenciales invalidas
-09:43:08.893 INFO  AUTOMATION - Ingresamos a la URL de home
-09:43:12.454 INFO  AUTOMATION - Navegamos hasta la pantalla de login
-09:43:13.213 INFO  AUTOMATION - Ingresamos el correo y la contraseña
-09:43:13.332 INFO  AUTOMATION - Enviamos los datos de login
-09:43:14.239 INFO  AUTOMATION - Validamos el mensaje de error
-09:43:14.271 INFO  AUTOMATION - Ingresamos con credenciales validas
-09:43:14.272 INFO  AUTOMATION - Ingresamos a la URL de home
-09:43:14.951 INFO  AUTOMATION - Navegamos hasta la pantalla de login
-09:43:15.617 INFO  AUTOMATION - Ingresamos el correo y la contraseña
-09:43:15.708 INFO  AUTOMATION - Enviamos los datos de login
-09:43:17.076 INFO  AUTOMATION - Navegamos hasta la seccion de Accessories
-09:43:20.529 INFO  AUTOMATION - Damos click en producto del primero de la Lista
-09:43:22.057 INFO  AUTOMATION - Indicamos que vamos a adquirir 5 articulos
-09:43:24.593 INFO  AUTOMATION - Text Fallo: Caso3Test
-09:43:24.904 INFO  AUTOMATION - Suite finalizada Default Suite
+11:15:20.674 INFO  AUTOMATION - Suite iniciada Default Suite
+11:15:22.628 INFO  AUTOMATION - Comenzamos el test: Caso3Test
+11:15:22.653 INFO  AUTOMATION - Ingresamos credenciales invalidas
+11:15:22.653 INFO  AUTOMATION - Ingresamos a la URL de home
+11:15:26.311 INFO  AUTOMATION - Navegamos hasta la pantalla de login
+11:15:26.994 INFO  AUTOMATION - Ingresamos el correo y la contraseña
+11:15:27.120 INFO  AUTOMATION - Enviamos los datos de login
+11:15:27.848 INFO  AUTOMATION - Validamos el mensaje de error
+11:15:27.878 INFO  AUTOMATION - Ingresamos con credenciales validas
+11:15:27.878 INFO  AUTOMATION - Ingresamos a la URL de home
+11:15:28.558 INFO  AUTOMATION - Navegamos hasta la pantalla de login
+11:15:29.204 INFO  AUTOMATION - Ingresamos el correo y la contraseña
+11:15:29.296 INFO  AUTOMATION - Enviamos los datos de login
+11:15:30.757 INFO  AUTOMATION - Navegamos hasta la seccion de Accessories
+11:15:34.128 INFO  AUTOMATION - Damos click en producto del primero de la Lista
+11:15:35.589 INFO  AUTOMATION - Indicamos que vamos a adquirir 5 articulos
+11:15:37.804 INFO  AUTOMATION - Text existoso: Caso3Test
+11:15:37.942 INFO  AUTOMATION - Suite finalizada Default Suite
