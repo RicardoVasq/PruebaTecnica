@@ -39,3 +39,8 @@ build/
 
 # Ignorar la carpeta de logs en test/resources
 /test/resources/logs/
+*.log
+debugLogs.log
+informativeLogs.log
+traceLogs.log
+!**/src/test/**/logs/
