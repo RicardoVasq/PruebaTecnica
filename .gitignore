@@ -38,4 +38,4 @@ build/
 .DS_Store
 
 # Ignorar la carpeta de logs en test/resources
-test/resources/logs/
+/test/resources/logs/
