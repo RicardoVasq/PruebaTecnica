@@ -37,7 +37,7 @@ public class caso3ProcesoCompra extends BaseTest {
         List<WebElement> elements = driver.findElements(By.cssSelector("a[class='select-list js-search-link']"));
         for (WebElement element : elements){
             final var opcion = element.getText();
-            if(opcion.equals("Name, Z to A")){
+            if(opcion.equals("Name, A to Z")){
                 element.click();
                 break;
             }
