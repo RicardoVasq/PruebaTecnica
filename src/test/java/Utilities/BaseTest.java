@@ -14,6 +14,7 @@ import org.testng.annotations.Listeners;
 import org.testng.asserts.SoftAssert;
 
 import java.time.Duration;
+import java.util.concurrent.TimeUnit;
 
 
 @Listeners({TestListener.class, SuiteListeners.class})
@@ -36,7 +37,7 @@ public class BaseTest {
         Logs.debug("Borrando cookies");
         driver.manage().deleteAllCookies();
 
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 
         Logs.debug("asignamos el webdriver");
         new WebDriverProvider().set(driver);

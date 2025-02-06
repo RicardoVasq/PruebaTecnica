@@ -2,10 +2,11 @@ package Automation;
 
 import Utilities.BaseTest;
 import Utilities.Logs;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.StaleElementReferenceException;
-import org.openqa.selenium.WebElement;
+import Utilities.WebDriverProvider;
+import org.openqa.selenium.*;
+import org.openqa.selenium.bidi.log.Log;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -14,6 +15,8 @@ import java.time.Duration;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Locale;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class caso3ProcesoCompra extends BaseTest {
 
@@ -42,61 +45,57 @@ public class caso3ProcesoCompra extends BaseTest {
                 break;
             }
         }
-        Logs.debug("Obtenemos la lista de productos");
-        List<WebElement> productos = driver.findElements(By.cssSelector("article[class=\"product-miniature js-product-miniature\"]"));
+        Logs.debug("Obtenemos el primero producto del listado, hacemos una espera que carge el ordenamiento seleccionado");
+        Thread.sleep(2000);
+        final var primerProducto = driver.findElement(By.cssSelector("h2[class='h3 product-title']")).getText().toUpperCase();
+        Logs.debug("Capturamos el precio del primero producto en la lista");
+        final var precioPrimeroProducto = driver.findElement(By.cssSelector("div[class='product-price-and-shipping']")).getText();
 
-        Logs.debug(" Crear un array de Strings para almacenar los textos de los productos");
-        String[] productosArray = new String[productos.size()];
+        Logs.info("Damos click en producto del primero de la Lista");
+        driver.findElement(By.xpath("//img[@alt='Brown bear cushion']")).click();
 
-        Logs.debug("Llenar el array con los textos de los productos");
-        for (int i = 0; i < productos.size(); i++) {
-            productosArray[i] = productos.get(i).getText();
-        }
-        Arrays.sort(productosArray);
+        Logs.debug("Capturamos el titulo del producto seleccionnado y el precio");
+        final var productoSeleccionado = driver.findElement(By.cssSelector("h1[class='h1']")).getText();
+        final var precioProductoSelecionado = driver.findElement(By.cssSelector("div[class='current-price']")).getText();
 
-        Logs.debug("Capturamos el primer producto de la lista ordenada");
-        final var ordenProductos = productosArray[0];
-
-        Logs.debug("Separamos el nombre del producto del precio");
-        String[] division = ordenProductos.split("\n");
-
-        Logs.debug("Capturamos el nombre del primer producto ");
-        final var primerProducto =  division[0];
-        Logs.debug("Capturamos el precio del primer producto");
-        final var  primerPrecio = (division[1]);
-
-
-        for (int i = 0; i < 3; i++) {
-            try {
-                WebElement image = driver.findElement(By.xpath("//img[@alt='Brown bear cushion']"));
-                ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", image);
-                image.click();
-                break;
-            } catch (StaleElementReferenceException e) {
-                System.out.println("Elemento no válido, reintentando...");
-            }
-        }
-
-
-        Logs.debug("Comparamos precio y nombre del producto");
-        final var titulo = driver.findElement(By.cssSelector("h1[class='h1']")).getText();
-        final var upperCase = titulo.toUpperCase(Locale.ROOT);
-        softAssertl.assertEquals(upperCase, primerProducto.toUpperCase());
-        softAssertl.assertEquals(driver.findElement(By.cssSelector("span[class='current-price-value']")).getText(),
-                primerPrecio);
+        Logs.debug("Comparamos titulos y precios");
+        softAssertl.assertEquals(productoSeleccionado,primerProducto);
+        softAssertl.assertEquals(precioPrimeroProducto,precioProductoSelecionado);
         softAssertl.assertAll();
 
-        for (int i = 1; i <= 4; i++) {
-            driver.findElement(By.xpath("//button[@class='btn btn-touchspin js-touchspin bootstrap-touchspin-up']")).click();
+        Logs.info("Indicamos que vamos a adquirir 5 articulos");
+        for (int i = 1; i < 5; i++) {
+            driver.findElement(
+                    By.xpath("//button[@class='btn btn-touchspin js-touchspin bootstrap-touchspin-up']"))
+                    .click();
+        }
+        Logs.debug("Hacemos click en añadir a Carrito");
+        driver.findElement(By.cssSelector("button[class='btn btn-primary add-to-cart']")).click();
+
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(2));
+        WebElement elemento = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("div[class='cart-content']")));
+
+        final var cantidadProducto = driver.findElement(By.cssSelector("span[class='product-quantity']")).getText();
+
+        Logs.debug("la cantidad de prodcuto es %s", cantidadProducto);
+
+        Logs.debug("Extraermos el precio total de la compra ");
+        final var precioTotal = driver.findElement(By.cssSelector("p[class=\"product-total\"]")).getText();
+
+        Pattern pattern = Pattern.compile("\\d+\\.\\d+");
+        Matcher matcher = pattern.matcher(precioTotal);
+
+        String precioCompra = "";
+        if (matcher.find()) {
+            precioCompra = matcher.group(); // Captura el número
         }
 
-        Assert.assertEquals(driver.findElement(By.cssSelector("input[name='qty']")).getAttribute("value"),"5");
+        Logs.debug("la cantidad de prodcuto es %s", precioCompra);
 
-        driver.findElement(By.cssSelector("button[data-button-action=\"add-to-cart\"]")).click();
 
-        Logs.info("damos click al confirmar la compra ");
-        WebDriverWait wait1 = new WebDriverWait(driver, Duration.ofSeconds(10));
-        driver.findElement(By.cssSelector("button[class=\"btn btn-secondary\"]")).click();
+        Logs.debug("Comparamos el total mostrado con la esperado");
 
+
+        Assert.assertEquals(precioProductoSelecionado,"error");
     }
 }

@@ -1,10 +1,18 @@
-14:05:06.991 INFO  AUTOMATION - Suite iniciada Default Suite
-14:05:15.960 INFO  AUTOMATION - Comenzamos el test: Caso1Test
-14:05:16.010 INFO  AUTOMATION - Ingresamos a la URL: https://teststore.automationtesting.co.uk/index.php
-14:05:19.174 INFO  AUTOMATION - Navegamos a la pagina de Contact us
-14:05:20.580 INFO  AUTOMATION - Validamos la redireccion hacia la pagina Contact US
-14:05:20.599 INFO  AUTOMATION - Validamos que esten visibles los campos Subject, email, message
-14:05:20.599 INFO  AUTOMATION - Validamos que al momento de enviar vacios los campos genere error
-14:05:21.440 INFO  AUTOMATION - cambios
-14:05:21.465 INFO  AUTOMATION - Text existoso: Caso1Test
-14:05:21.825 INFO  AUTOMATION - Suite finalizada Default Suite
+09:43:06.006 INFO  AUTOMATION - Suite iniciada Default Suite
+09:43:08.869 INFO  AUTOMATION - Comenzamos el test: Caso3Test
+09:43:08.893 INFO  AUTOMATION - Ingresamos credenciales invalidas
+09:43:08.893 INFO  AUTOMATION - Ingresamos a la URL de home
+09:43:12.454 INFO  AUTOMATION - Navegamos hasta la pantalla de login
+09:43:13.213 INFO  AUTOMATION - Ingresamos el correo y la contraseña
+09:43:13.332 INFO  AUTOMATION - Enviamos los datos de login
+09:43:14.239 INFO  AUTOMATION - Validamos el mensaje de error
+09:43:14.271 INFO  AUTOMATION - Ingresamos con credenciales validas
+09:43:14.272 INFO  AUTOMATION - Ingresamos a la URL de home
+09:43:14.951 INFO  AUTOMATION - Navegamos hasta la pantalla de login
+09:43:15.617 INFO  AUTOMATION - Ingresamos el correo y la contraseña
+09:43:15.708 INFO  AUTOMATION - Enviamos los datos de login
+09:43:17.076 INFO  AUTOMATION - Navegamos hasta la seccion de Accessories
+09:43:20.529 INFO  AUTOMATION - Damos click en producto del primero de la Lista
+09:43:22.057 INFO  AUTOMATION - Indicamos que vamos a adquirir 5 articulos
+09:43:24.593 INFO  AUTOMATION - Text Fallo: Caso3Test
+09:43:24.904 INFO  AUTOMATION - Suite finalizada Default Suite
