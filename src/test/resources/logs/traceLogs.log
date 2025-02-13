@@ -1,17 +1,15 @@
-14:05:06.991 INFO  AUTOMATION - Suite iniciada Default Suite
-14:05:07.372 DEBUG AUTOMATION - Borrando la evidencia Anterior
-14:05:08.030 DEBUG AUTOMATION - Inicializamos el Webdriver
-14:05:15.659 DEBUG AUTOMATION - Maximizamos pantalla
-14:05:15.738 DEBUG AUTOMATION - Borrando cookies
-14:05:15.761 DEBUG AUTOMATION - asignamos el webdriver
-14:05:15.960 INFO  AUTOMATION - Comenzamos el test: Caso1Test
-14:05:16.010 INFO  AUTOMATION - Ingresamos a la URL: https://teststore.automationtesting.co.uk/index.php
-14:05:19.174 INFO  AUTOMATION - Navegamos a la pagina de Contact us
-14:05:20.580 INFO  AUTOMATION - Validamos la redireccion hacia la pagina Contact US
-14:05:20.599 INFO  AUTOMATION - Validamos que esten visibles los campos Subject, email, message
-14:05:20.599 INFO  AUTOMATION - Validamos que al momento de enviar vacios los campos genere error
-14:05:21.440 INFO  AUTOMATION - cambios
-14:05:21.445 DEBUG AUTOMATION - Before test stop de allure
-14:05:21.465 INFO  AUTOMATION - Text existoso: Caso1Test
-14:05:21.466 DEBUG AUTOMATION - Finalizamos el webDriver
-14:05:21.825 INFO  AUTOMATION - Suite finalizada Default Suite
+09:24:54.340 INFO  AUTOMATION - Suite iniciada Default Suite
+09:24:54.403 DEBUG AUTOMATION - Borrando la evidencia Anterior
+09:24:54.504 DEBUG AUTOMATION - Inicializamos el Webdriver
+09:24:55.735 DEBUG AUTOMATION - Maximizamos pantalla
+09:24:55.764 DEBUG AUTOMATION - Borrando cookies
+09:24:55.770 DEBUG AUTOMATION - asignamos el webdriver
+09:24:55.821 INFO  AUTOMATION - Comenzamos el test: validarMensajeErrorEnContacto
+09:24:55.833 INFO  AUTOMATION - Ingresamos a la URL: https://teststore.automationtesting.co.uk/index.php
+09:25:00.028 INFO  AUTOMATION - Navegamos a la pagina de Contact us
+09:25:00.762 INFO  AUTOMATION - Validamos la redireccion hacia la pagina Contact US
+09:25:00.768 INFO  AUTOMATION - Validamos que esten visibles los campos Subject, email, message
+09:25:01.516 DEBUG AUTOMATION - Before test stop de allure
+09:25:01.523 INFO  AUTOMATION - Text existoso: validarMensajeErrorEnContacto
+09:25:01.525 DEBUG AUTOMATION - Finalizamos el webDriver
+09:25:01.666 INFO  AUTOMATION - Suite finalizada Default Suite

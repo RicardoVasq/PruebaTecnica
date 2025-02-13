@@ -1,0 +1,1 @@
+./mvnw clean test -Dtest="Automation.**"

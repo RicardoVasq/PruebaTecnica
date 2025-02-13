@@ -22,7 +22,7 @@ public class BaseTest {
     protected SoftAssert softAssertl;
     protected final String smoke = "regression";
     protected final String regression = "regression";
-    protected WebDriver driver;
+    protected static WebDriver driver;
 
     @BeforeMethod (alwaysRun = true)
     public void mastersetUp() {
@@ -49,7 +49,6 @@ public class BaseTest {
     }
 
     //Metodos - reutilizables
-
     public void redireccionContactus(){
         final var urlPrincipal = "https://teststore.automationtesting.co.uk/index.php";
         Logs.info("Ingresamos a la URL: %s", urlPrincipal);
@@ -66,6 +65,7 @@ public class BaseTest {
         Logs.info("Validamos que esten visibles los campos Subject, email, message");
 
     }
+
     public void Login(String correo,String contra){
         Logs.info("Ingresamos a la URL de home");
         driver.get("https://teststore.automationtesting.co.uk/index.php");
@@ -80,4 +80,6 @@ public class BaseTest {
         Logs.info("Enviamos los datos de login");
         driver.findElement(By.id("submit-login")).click();
     }
+
+
 }
