@@ -12,7 +12,7 @@ public class contactUsTest extends BaseTest {
 
     @Test
     public void caso1ErrorMensajeContactaUs() {
-        redireccionContactus();
+        contactUsPage.redireccionContactus();
 
         contactUsPage.clickSubmitButton();
 
@@ -22,7 +22,7 @@ public class contactUsTest extends BaseTest {
 
     @Test
     public void caso2EnvioFormulario(){
-        redireccionContactus();
+        contactUsPage.redireccionContactus();
         Logs.info("Seleccionamos la opcion de Webmaster del campo Subject");
         contactUsPage.opcionContact("1");
 
