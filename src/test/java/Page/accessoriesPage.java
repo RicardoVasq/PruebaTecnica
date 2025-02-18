@@ -15,23 +15,23 @@ import java.util.List;
 public class accessoriesPage extends BaseTest {
 
     //Localizadores
-    private static By errorMensajeLogin = By.xpath("//li[text()='Authentication failed.']");
-    private static By linkLogin = By.cssSelector("div[class='user-info']");
-    private static By campoEmail = By.id("field-email");
-    private static By campoContra =  By.id("field-password");
-    private static By buttonLogin = By.id("submit-login");
-    private static By nombreUsuarioLogeado = By.xpath("//span[text()='Ricardo Vasquez']");
-    private static By ingresoAccesories = By.id("category-6");
-    private static By buttonOrden = By.cssSelector("button[data-toggle='dropdown']");
-    private static By opcionesOrden = By.cssSelector("a[class='select-list js-search-link']");
-    private static By primerProducto = By.cssSelector("article[class=\"product-miniature js-product-miniature\"]");
-    private static By buttonAnadirCantidadProducto = By.xpath("//button[@class='btn btn-touchspin js-touchspin bootstrap-touchspin-up']");
-    private static By clickPrimerProducto = By.cssSelector("div[class='thumbnail-top']");
-    private static By buttonAddtoCard = By.cssSelector("button[data-button-action='add-to-cart']");
-    private static By titleProductos = By.cssSelector("h1[class='h1']");
-    private static By precioProdcuto = By.cssSelector("span[class='current-price-value']");
-    private static By modalCompras = By.id("blockcart-modal");
-    private static By precioTotalCompra = By.cssSelector("span[class='value']");
+    private static final By errorMensajeLogin = By.xpath("//li[text()='Authentication failed.']");
+    private static final By linkLogin = By.cssSelector("div[class='user-info']");
+    private static final By campoEmail = By.id("field-email");
+    private static final By campoContra =  By.id("field-password");
+    private static final By buttonLogin = By.id("submit-login");
+    private static final By nombreUsuarioLogeado = By.xpath("//span[text()='Ricardo Vasquez']");
+    private static final By ingresoAccesories = By.id("category-6");
+    private static final By buttonOrden = By.cssSelector("button[data-toggle='dropdown']");
+    private static final By opcionesOrden = By.cssSelector("a[class='select-list js-search-link']");
+    private static final By primerProducto = By.cssSelector("article[class=\"product-miniature js-product-miniature\"]");
+    private static final By buttonAnadirCantidadProducto = By.xpath("//button[@class='btn btn-touchspin js-touchspin bootstrap-touchspin-up']");
+    private static final By clickPrimerProducto = By.cssSelector("div[class='thumbnail-top']");
+    private static final By buttonAddtoCard = By.cssSelector("button[data-button-action='add-to-cart']");
+    private static final By titleProductos = By.cssSelector("h1[class='h1']");
+    private static final By precioProdcuto = By.cssSelector("span[class='current-price-value']");
+    private static final By modalCompras = By.id("blockcart-modal");
+    private static final By precioTotalCompra = By.cssSelector("span[class='value']");
 
     //Metodos Accion
     public static boolean mensajeLogin(){
