@@ -1,0 +1,18 @@
+{
+
+  "credentialsLogin": {
+    "usuario": "prueba@gg.com",
+    "contra": "ricardo",
+    "usuarioInvalido": "HH@gg.com",
+    "contraInvalida": "prueba"
+  },
+
+"products": {
+    "ordenProducto": "Name, A to Z"
+  },
+
+  "compra": {
+    "cantidadProduct": 3,
+    "valorPishing": 7.00
+  }
+}
