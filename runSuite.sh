@@ -1,1 +1,1 @@
-./mvnw clean test -Dtest="Automation.**"
+./mvnw clean test -Dtest="Test.**"

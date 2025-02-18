@@ -26,10 +26,11 @@ public class contactUsPage extends BaseTest {
         WebElement errorElement = driver.findElement(errorMessage);
         return errorElement.isDisplayed();
     }
-    public static void opcionContact(String opcion){
+    public static void opcionContact(int opcion){
+
         WebElement select = driver.findElement(selectContact);
         Select dropdwon = new Select(select);
-        dropdwon.selectByValue(opcion);
+        dropdwon.selectByValue(Integer.toString(opcion));
     }
     public static void ingresarEmail(String email){
         driver.findElement(campoEmail).sendKeys(email);

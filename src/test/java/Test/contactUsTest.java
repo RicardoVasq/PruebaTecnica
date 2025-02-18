@@ -1,4 +1,5 @@
 package Test;
+import Readers.JsonReader;
 import Utilities.BaseTest;
 import Utilities.Logs;
 import org.testng.Assert;
@@ -22,13 +23,13 @@ public class contactUsTest extends BaseTest {
     public void caso2EnvioFormulario(){
         contactUsPage.redireccionContactus();
         Logs.info("Seleccionamos la opcion de Webmaster del campo Subject");
-        contactUsPage.opcionContact("1");
+        contactUsPage.opcionContact(JsonReader.variableReader().getContactFormulario().getSubjectOpcion());
 
         Logs.info("Ingresamos un email de prueba");
-        contactUsPage.ingresarEmail("test12@prueba.com");
+        contactUsPage.ingresarEmail(JsonReader.variableReader().getContactFormulario().getEmailAddress());
 
         Logs.info("Digiamos el texto en el elemento Message");
-        contactUsPage.ingresarMessage("Linea de texto 1\nLinea de texto 2\nLinea de Texto 3");
+        contactUsPage.ingresarMessage(JsonReader.variableReader().getContactFormulario().getMessage());
 
         Logs.info("Enviamos la informacion y validamos el envio exitoso");
         contactUsPage.clickSubmitButton();

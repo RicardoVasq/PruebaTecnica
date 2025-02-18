@@ -1,5 +1,4 @@
 {
-
   "credentialsLogin": {
     "usuario": "prueba@gg.com",
     "contra": "ricardo",
@@ -7,8 +6,14 @@
     "contraInvalida": "prueba"
   },
 
-"products": {
-    "ordenProducto": "Name, A to Z"
+  "contactFormulario": {
+    "subjectOpcion": 1,
+    "emailAddress": "prueba@gg.com",
+    "message": "Linea de mensaje \n Linea de Mensaje \n Linea de Mensaje"
+  },
+
+  "products": {
+    "ordenProducto": "Name, Z to A"
   },
 
   "compra": {
