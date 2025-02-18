@@ -5,7 +5,11 @@ import Utilities.Logs;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+
+import java.time.Duration;
 import java.util.List;
 
 public class accessoriesPage extends BaseTest {
@@ -22,7 +26,13 @@ public class accessoriesPage extends BaseTest {
     private static By opcionesOrden = By.cssSelector("a[class='select-list js-search-link']");
     private static By primerProducto = By.cssSelector("article[class=\"product-miniature js-product-miniature\"]");
     private static By buttonAnadirCantidadProducto = By.xpath("//button[@class='btn btn-touchspin js-touchspin bootstrap-touchspin-up']");
-    private static By clickPrimerProducto = By.cssSelector("div[class='product-description']");
+    private static By clickPrimerProducto = By.cssSelector("div[class='thumbnail-top']");
+    private static By buttonAddtoCard = By.cssSelector("button[data-button-action='add-to-cart']");
+    private static By titleProductos = By.cssSelector("h1[class='h1']");
+    private static By precioProdcuto = By.cssSelector("span[class='current-price-value']");
+    private static By modalCompras = By.id("blockcart-modal");
+    private static By precioTotalCompra = By.cssSelector("span[class='value']");
+
     //Metodos Accion
     public static boolean mensajeLogin(){
         return driver.findElement(errorMensajeLogin).isDisplayed();
@@ -56,7 +66,28 @@ public class accessoriesPage extends BaseTest {
         for (int i = 1; i < cantidad ; i++) {
             driver.findElement(buttonAnadirCantidadProducto).click();
         }
+
     }
+    public static void clickAddtoCard() throws InterruptedException {driver.findElement(buttonAddtoCard).click();
+        Thread.sleep(1000);
+    }
+    public static void compararNombreProductoaComprar(String nombrePrimerProducto){
+        Assert.assertEquals(nombrePrimerProducto.toUpperCase(), driver.findElement(titleProductos).getText());
+    }
+    public static void compararPrecioProductoaComprar(double precioPrimerProducto){
+        Assert.assertEquals(precioPrimerProducto, obtenerPrecio(driver.findElement(precioProdcuto).getText()));
+    }
+    public static void setModalCompras(){
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        WebElement modal = wait.until(ExpectedConditions.visibilityOfElementLocated(modalCompras));
+    }
+    public static void validarPreciofinalCompra(int cantidadProducto, double precioPRoduco, double Shipping ){
+        final var finalPrecio = (cantidadProducto*precioPRoduco) + Shipping;
+        setModalCompras();
+        Logs.info("Precio final %s",obtenerPrecio(driver.findElement(precioTotalCompra).getText()));
+        Assert.assertEquals(finalPrecio,obtenerPrecio(driver.findElement(precioTotalCompra).getText()));
+    }
+
 
 
     //Metodos reutilizacion

@@ -1,13 +1,10 @@
-package Automation;
+package Test;
 
 import Utilities.BaseTest;
 import Utilities.Logs;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import Page.accessoriesPage;
-
-import java.time.Duration;
 
 public class accessoriesTest extends BaseTest {
     @Test
@@ -37,10 +34,18 @@ public class accessoriesTest extends BaseTest {
         final var precioPrimerProducto = accessoriesPage.obtenerPrecio(infoproducto[1]);
 
         Logs.info("Damos click en producto del primero de la Lista");
-        //Tenes que pensar como hacer click en el primer producto de una forma escalable
-        accessoriesPage.seleccionarPrimerProducto(); //AUN ESTAMOS ACA
-        //accessoriesPage.aumentarCantidadProdcuto(5); //no se le ha dado click aun al producto
 
-
+        accessoriesPage.seleccionarPrimerProducto();
+        //Hay que validar que sea el mismo producto de la lista
+        Logs.info("Validamos Nombre del producto");
+        accessoriesPage.compararNombreProductoaComprar(nombrePrimerProducto);
+        Logs.info("Validamos Nombre del Precio");
+        accessoriesPage.compararPrecioProductoaComprar(precioPrimerProducto);
+        Logs.info("Aumentamos cantidad de proctos");
+        accessoriesPage.aumentarCantidadProdcuto(5);
+        Logs.info("Anadimos al carrito");
+        accessoriesPage.clickAddtoCard();
+        Logs.info("Validamos precio");
+        accessoriesPage.validarPreciofinalCompra(5,precioPrimerProducto,7);
     }
 }
