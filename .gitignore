@@ -36,14 +36,3 @@ build/
 
 ### Mac OS ###
 .DS_Store
-
-# Ignorar la carpeta de logs en test/resources
-/test/resources/logs/
-*.log
-debugLogs.log
-informativeLogs.log
-traceLogs.log
-!**/src/test/resources/logs/*
-/src/test/resources/logs/debugLogs.log
-/src/test/resources/logs/informativeLogs.log
-/src/test/resources/logs/traceLogs.log
