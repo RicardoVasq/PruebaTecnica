@@ -13,6 +13,8 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Listeners;
 import org.testng.asserts.SoftAssert;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.time.Duration;
 
 
@@ -64,8 +66,13 @@ public class BaseTest {
                 "https://teststore.automationtesting.co.uk/index.php?controller=contact");
 
         Logs.info("Validamos que esten visibles los campos Subject, email, message");
-
     }
+    public static double redondear(double valor, int decimales) {
+        BigDecimal bd = new BigDecimal(valor);
+        bd = bd.setScale(decimales, RoundingMode.HALF_UP); // Redondeo normal
+        return bd.doubleValue();
+    }
+
     public static void Login(String correo, String contra){
         Logs.info("Ingresamos a la URL de home");
         driver.get("https://teststore.automationtesting.co.uk/index.php");

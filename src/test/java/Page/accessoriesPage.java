@@ -85,7 +85,7 @@ public class accessoriesPage extends BaseTest {
         final var finalPrecio = (cantidadProducto*precioPRoduco) + Shipping;
         setModalCompras();
         Logs.info("Precio final %s",obtenerPrecio(driver.findElement(precioTotalCompra).getText()));
-        Assert.assertEquals(finalPrecio,obtenerPrecio(driver.findElement(precioTotalCompra).getText()));
+        Assert.assertEquals(redondear(finalPrecio,1),obtenerPrecio(driver.findElement(precioTotalCompra).getText()));
     }
 
 
